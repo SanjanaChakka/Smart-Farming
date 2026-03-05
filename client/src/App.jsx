@@ -22,7 +22,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-        <Route path="/disease" element={<PrivateRoute><DiseaseDetection /></PrivateRoute>} />
+        <Route path="/detect" element={<PrivateRoute><DiseaseDetection /></PrivateRoute>} />
         <Route path="/yield" element={<PrivateRoute><YieldPrediction /></PrivateRoute>} />
         <Route path="/irrigation" element={<PrivateRoute><Irrigation /></PrivateRoute>} />
         <Route path="/history" element={<PrivateRoute><History /></PrivateRoute>} />

@@ -1,7 +1,8 @@
+import React from "react";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { registerFarmer } from "../api";
-import React from 'react';
+
 
 export default function Register() {
   const navigate = useNavigate();
