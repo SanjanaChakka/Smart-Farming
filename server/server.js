@@ -21,7 +21,7 @@ app.use("/api/auth", require("./routes/auth"));
 app.use("/api/disease", require("./routes/disease"));
 app.use("/api/yield", require("./routes/yield"));
 app.use("/api/irrigation", require("./routes/irrigation"));
-
+app.use("/api/predict", require("./routes/predict"));
 // Health check route
 app.get("/api/health", (req, res) => {
   res.json({
