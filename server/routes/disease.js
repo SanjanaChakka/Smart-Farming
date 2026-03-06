@@ -21,7 +21,7 @@ router.post("/detect", upload.single("image"), async (req, res) => {
 
     // Run Python script
     const result = await new Promise((resolve, reject) => {
-      const python = spawn("py", ["-3.10", "model/predict.py", imagePath])
+      const python = spawn("py", ["-3.12", "model/predict.py", imagePath])
       let output = "";
       let errorOutput = "";
 

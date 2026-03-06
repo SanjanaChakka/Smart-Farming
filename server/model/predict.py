@@ -23,8 +23,7 @@ def predict_image(img_path):
     img_array = image.img_to_array(img)
 
     img_array = np.expand_dims(img_array,axis=0)
-    img_array = img_array/255.0
-
+    img_array = (img_array / 127.5) - 1
     predictions = model.predict(img_array,verbose=0)
 
     predicted_index = np.argmax(predictions)
@@ -43,7 +42,7 @@ if __name__ == "__main__":
     predicted,confidence = predict_image(img_path)
 
     # Non plant filter
-    if confidence < 0.60:
+    if confidence < 0.20:
         result = {
             "error":"Please upload a clear plant leaf image"
         }
